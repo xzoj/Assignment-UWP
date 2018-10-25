@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.28107.0
+VisualStudioVersion = 15.0.28010.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UWP_NTA_", "UWP_NTA_\UWP_NTA_.csproj", "{4D1F7421-1E0C-4F97-9DD4-FD3011726CC9}"
 EndProject
@@ -46,6 +46,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {2D9444C7-7CCF-46DC-889D-619D54A1096B}
+		SolutionGuid = {0BB5062C-6BF4-4ED9-B83E-8E92A217E915}
 	EndGlobalSection
 EndGlobal
