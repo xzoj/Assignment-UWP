@@ -42,24 +42,24 @@ namespace UWP_NTA_.Views
         private async void Handle_Signup(object sender, RoutedEventArgs e)
         {
             var flag = 0;
-            if(this.Email.Text == null)
+            if(this.Email.Text == null || this.Email.Text == "")
             {
-                Email_Error.Text = "*";
+                Email_Error.Text = "(*)";
                 flag = 1;
             }
-            if (this.FirstName == null)
+            if (this.FirstName == null || this.FirstName.Text == "")
             {
-                FirstName_Error.Text = "*";
+                FirstName_Error.Text = "(*)";
                 flag = 1;
             }
-            if (this.LastName.Text == null)
+            if (this.LastName.Text == null || this.LastName.Text == "")
             {
-                LastName_Error.Text = "*";
+                LastName_Error.Text = "(*)";
                 flag = 1;
             }
-            if (this.Phone.Text == null)
+            if (this.Phone.Text == null || this.Phone.Text == "")
             {
-                Phone_Error.Text = "*";
+                Phone_Error.Text = "(*)";
                 flag = 1;
             }
 
@@ -90,7 +90,7 @@ namespace UWP_NTA_.Views
 
             } else
             {
-                Register_error.Text = "field (*) can not be null";
+                Register_error.Text = "Fields (*) can not be null";
             }
             
         }
@@ -206,43 +206,51 @@ namespace UWP_NTA_.Views
 
         private async void Log_in(object sender, RoutedEventArgs e)
         {
-            var httpResponseMessage = ApiHandle.Sign_In(Username.Text, Password_login.Password);
-
-            var responseContent = await httpResponseMessage.Content.ReadAsStringAsync();
-            if (httpResponseMessage.StatusCode == HttpStatusCode.Created)
+            if(this.Username.Text == null || this.Username.Text == "" || this.Password_login.Password == null || this.Password_login.Password == "")
             {
-                // save file...
-                Debug.WriteLine(responseContent);
-                // Doc token
-                TokenResponse token = JsonConvert.DeserializeObject<TokenResponse>(responseContent);
-
-                // Luu token
-                StorageFolder folder = ApplicationData.Current.LocalFolder;
-                StorageFile file = await folder.CreateFileAsync("token.txt", CreationCollisionOption.ReplaceExisting);
-                await FileIO.WriteTextAsync(file, responseContent);
-                Debug.WriteLine("login success!");
-
+                Login_Error.Text = "Email & Password can not be null!";
             }
             else
             {
-                // Xu ly loi.
-                //errorresponse errorobject = jsonconvert.deserializeobject<errorresponse>(responsecontent);
-                //if (errorobject != null && errorobject.error.count > 0)
-                //{
-                //    foreach (var key in errorobject.error.keys)
-                //    {
-                //        var textmessage = findname(key);
-                //        if (textmessage == null)
-                //        {
-                //            continue;
-                //        }
-                //        textblock textblock = textmessage as textblock;
-                //        textblock.text = errorobject.error[key];
-                //        textblock.visibility = visibility.visible;
-                //    }
-                //}
-                //Debug.WriteLine(errorObject);
+                var httpResponseMessage = ApiHandle.Sign_In(Username.Text, Password_login.Password);
+
+                var responseContent = await httpResponseMessage.Content.ReadAsStringAsync();
+                if (httpResponseMessage.StatusCode == HttpStatusCode.Created)
+                {
+                    // save file...
+                    Debug.WriteLine(responseContent);
+                    // Doc token
+                    TokenResponse token = JsonConvert.DeserializeObject<TokenResponse>(responseContent);
+
+                    // Luu token
+                    StorageFolder folder = ApplicationData.Current.LocalFolder;
+                    StorageFile file = await folder.CreateFileAsync("token.txt", CreationCollisionOption.ReplaceExisting);
+                    await FileIO.WriteTextAsync(file, responseContent);
+                    Debug.WriteLine("login success!");
+
+                }
+                else
+                {
+                    // Xu ly loi.
+                    //errorresponse errorobject = jsonconvert.deserializeobject<errorresponse>(responsecontent);
+                    //if (errorobject != null && errorobject.error.count > 0)
+                    //{
+                    //    foreach (var key in errorobject.error.keys)
+                    //    {
+                    //        var textmessage = findname(key);
+                    //        if (textmessage == null)
+                    //        {
+                    //            continue;
+                    //        }
+                    //        textblock textblock = textmessage as textblock;
+                    //        textblock.text = errorobject.error[key];
+                    //        textblock.visibility = visibility.visible;
+                    //    }
+                    //}
+                    //Debug.WriteLine(errorObject);
+                }
             }
+            
         }
     }
 }

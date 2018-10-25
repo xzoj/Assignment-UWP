@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\chunl\source\repos\UWP_NTA_\UWP_NTA_\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-10-25T10:44:46.630</Modified>
+      <Modified>2018-10-25T10:56:36.917</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\chunl\source\repos\UWP_NTA_\UWP_NTA_\bin\x86\Debug\UWP_NTA_.exe">
       <PackagePath>entrypoint\UWP_NTA_.exe</PackagePath>
-      <Modified>2018-10-25T10:44:44.258</Modified>
+      <Modified>2018-10-25T10:56:36.412</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\chunl\.nuget\packages\microsoft.csharp\4.3.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -562,15 +562,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\chunl\source\repos\UWP_NTA_\UWP_NTA_\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2018-10-25T10:44:43.966</Modified>
+      <Modified>2018-10-25T10:56:36.130</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\chunl\source\repos\UWP_NTA_\UWP_NTA_\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2018-10-25T10:44:43.968</Modified>
+      <Modified>2018-10-25T10:56:36.131</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\chunl\source\repos\UWP_NTA_\UWP_NTA_\bin\x86\Debug\Views\HomePage.xbf">
       <PackagePath>Views\HomePage.xbf</PackagePath>
-      <Modified>2018-10-25T10:44:43.969</Modified>
+      <Modified>2018-10-25T10:56:36.132</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Windows Kits\10\UnionMetadata\10.0.17134.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -582,7 +582,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\chunl\source\repos\UWP_NTA_\UWP_NTA_\bin\x86\Debug\Core\UWP_NTA_.exe">
       <PackagePath>UWP_NTA_.exe</PackagePath>
-      <Modified>2018-10-25T10:44:46.609</Modified>
+      <Modified>2018-10-25T10:56:36.913</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

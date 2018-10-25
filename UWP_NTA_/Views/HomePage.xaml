@@ -23,6 +23,7 @@
             </PivotItem>
             <PivotItem Header="Log In">
                 <StackPanel>
+                    <TextBlock x:Name="Login_Error" Foreground="Red"/>
                     <StackPanel>
                     <TextBox Header="Username:" x:Name="Username" HorizontalAlignment="Center" Width="250" />
                     <TextBlock x:Name="Username_Message" RelativePanel.Below="Username"/>
